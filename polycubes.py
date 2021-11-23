@@ -10,7 +10,7 @@ def rotate24(tensor): #rotates a 3d tensor in all possible ways
             tensor = rot90(tensor,axes=(0,1))
             yield tensor
 
-dim = 7#computes all n-cubes up to dim
+dim = int(input("Find all polycubes up to: "))#computes all n-cubes up to dim
 
 
 onecube = np.array([[[1 if i==j==k==3 else 0 for i in range(7)] for j in range(7)] for k in range(7)])#start from onecube
